@@ -115,7 +115,7 @@ class Client
 
         $options = array(
             CURLOPT_URL => $url,
-            CURLOPT_HTTPHEADER => self::getHeaders(),
+          CURLOPT_HTTPHEADER=> array('Expect:'),
             CURLOPT_POSTFIELDS => json_encode($params),
             CURLOPT_CONNECTTIMEOUT => self::$connectTimeout,
             CURLOPT_TIMEOUT => self::$requestTimeout,
